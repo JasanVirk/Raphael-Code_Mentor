@@ -3,3 +3,8 @@ dist
 node_modules
 .vscode-test/
 *.vsix
+docs/
+Implementation_plan.md
+*quickstart.md
+*.log
+

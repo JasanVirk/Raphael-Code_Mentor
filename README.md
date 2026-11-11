@@ -81,14 +81,6 @@ npm test
 
 ---
 
-## 📖 Architecture & Documentation
-
-- [Architecture Overview](docs/ARCHITECTURE.md)
-- [Initial Project Audit](docs/AUDIT.md)
-- [Implementation Plan](Implementation_plan.md)
-
----
-
 ## 📄 License
 
 MIT
