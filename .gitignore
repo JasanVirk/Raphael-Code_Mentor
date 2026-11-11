@@ -7,4 +7,11 @@ docs/
 Implementation_plan.md
 *quickstart.md
 *.log
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.cert
+*.crt
 
