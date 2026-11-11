@@ -30,12 +30,6 @@ export function activate(context: vscode.ExtensionContext): CodeMentorApi {
     // Register CodeMentor commands
     registerCommands(context, tutorProvider, diagnosticService, secretManager);
 
-    // Preserve scaffold helloWorld command for compatibility during transition
-    const helloWorldDisposable = vscode.commands.registerCommand('codementor.helloWorld', () => {
-        vscode.window.showInformationMessage('Hello World from CodeMentor!');
-    });
-    context.subscriptions.push(helloWorldDisposable);
-
     return {
         tutorSession,
         diagnosticService,

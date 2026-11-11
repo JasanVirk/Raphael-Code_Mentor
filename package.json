@@ -1,13 +1,29 @@
 {
   "name": "codementor",
   "displayName": "CodeMentor",
-  "description": " AI-powered coding tutor for Java",
+  "description": "AI-powered coding tutor for Java that guides students to understand errors",
   "version": "0.0.1",
+  "publisher": "jasanvirk",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JasanVirk/Raphael-Code_Mentor.git"
+  },
+  "keywords": [
+    "java",
+    "tutor",
+    "education",
+    "compiler",
+    "ai",
+    "gemini",
+    "hints"
+  ],
   "engines": {
     "vscode": "^1.137.0"
   },
   "categories": [
-    "Other"
+    "Education",
+    "Programming Languages"
   ],
   "activationEvents": [
     "onLanguage:java"
@@ -43,10 +59,6 @@
         "command": "codementor.jumpToLine",
         "title": "CodeMentor: Jump to Line",
         "category": "CodeMentor"
-      },
-      {
-        "command": "codementor.helloWorld",
-        "title": "Hello World"
       }
     ],
     "menus": {
@@ -118,6 +130,7 @@
     "watch:esbuild": "node esbuild.js --watch",
     "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
     "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "vscode:package": "vsce package --no-dependencies",
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
@@ -126,16 +139,17 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.137.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "24.x",
-    "typescript-eslint": "^8.61.1",
-    "eslint": "^10.5.0",
+    "@types/vscode": "^1.137.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0",
+    "@vscode/vsce": "^4.1.0",
     "esbuild": "^0.28.1",
+    "eslint": "^10.5.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^6.0.3",
-    "@vscode/test-cli": "^0.0.15",
-    "@vscode/test-electron": "^3.0.0"
+    "typescript-eslint": "^8.61.1"
   },
   "overrides": {
     "diff": "^8.0.4",
